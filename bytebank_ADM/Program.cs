@@ -1,32 +1,31 @@
-﻿using bytebank_ADM.Funcionarios;
-using bytebank_ADM.ParceriaComercial;
-using bytebank_ADM.SistemaInterno;
-using bytebank_ADM.Utilitario;
+﻿using bytebank_ADM.Employees;
+using bytebank_ADM.InternSystem;
+using bytebank_ADM.Utility;
 
 #region
 
-Funcionario pedro = new Auxiliar("123456789");
-pedro.Nome = "Pedro malazartes";
+Employee pedro = new Assistant("123456789");
+pedro.Name = "Pedro malazartes";
 
 //Console.WriteLine(pedro.Nome);
 //Console.WriteLine(pedro.GetBonificacao());
 
-Diretor roberta = new Diretor("987654321");
-roberta.Nome = "Roberta Silva";
+Director roberta = new Director("987654321");
+roberta.Name = "Roberta Silva";
 
 //Console.WriteLine(roberta.Nome);
 //Console.WriteLine(roberta.GetBonificacao());
 
-GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
-gerenciador.Registrar(pedro);
-gerenciador.Registrar(roberta);
+BonusManager gerenciador = new BonusManager();
+gerenciador.Register(pedro);
+gerenciador.Register(roberta);
 
 //Console.WriteLine("Total de bonificações: " + gerenciador.TotalDeBonficacao);
 //Console.WriteLine("Total de funcionários: " + Funcionario.TotalDeFuncionarios);
 
 
-pedro.AumentarSalario();
-roberta.AumentarSalario();
+pedro.IncreaseSalary();
+roberta.IncreaseSalary();
 
 //Console.WriteLine($"Novo salário do Pedro: {pedro.Salario}");
 //Console.WriteLine($"Novo salário do Roberta: {roberta.Salario}");
@@ -37,51 +36,54 @@ roberta.AumentarSalario();
 
 void CalcularBonificacao()
 {
-    GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+    BonusManager gerenciador = new BonusManager();
 
     Designer ulisses = new Designer("123456");
-    ulisses.Nome = "Ulisses Senna";
+    ulisses.Name = "Ulisses Senna";
 
-    Diretor paula = new Diretor("234567");
-    paula.Nome = "Paula Senna";
+    Director paula = new Director("234567");
+    paula.Name = "Paula Senna";
 
-    Auxiliar igor = new Auxiliar("345678");
-    igor.Nome = "Igor Senna";
+    Assistant igor = new Assistant("345678");
+    igor.Name = "Igor Senna";
 
-    GerenteDeContas camila = new GerenteDeContas("3456789");
-    camila.Nome = "Camila Senna";
+    AccountManager camila = new AccountManager("3456789");
+    camila.Name = "Camila Senna";
 
-    gerenciador.Registrar(ulisses);
-    gerenciador.Registrar(paula);
-    gerenciador.Registrar(igor);
-    gerenciador.Registrar(camila);
+    gerenciador.Register(ulisses);
+    gerenciador.Register(paula);
+    gerenciador.Register(igor);
+    gerenciador.Register(camila);
 
-    Console.WriteLine($"Total de bonificação = {gerenciador.TotalDeBonficacao}");
+    Console.WriteLine($"Total de bonificação = {gerenciador.BonusAmount}");
 }
 
 // CalcularBonificacao();
 
 #endregion
 
-void UsarSistema()
-{
-    SistemaInterno sistema = new SistemaInterno();
+#region
+//void usarsistema()
+//{
+//    internsystem sistema = new internsystem();
 
-    Diretor ingred = new Diretor("234567");
-    ingred.Nome = "Ingred Senna";
-    ingred.Senha = "123";
+//    director ingred = new director("234567");
+//    ingred.name = "ingred senna";
+//    ingred.password = "123";
 
-    GerenteDeContas ursula = new GerenteDeContas("345678");
-    ursula.Nome = "Ursula Senna";
-    ursula.Senha = "456";
+//    accountmanager ursula = new accountmanager("345678");
+//    ursula.name = "ursula senna";
+//    ursula.password = "456";
 
-    sistema.Logar(ingred, "123");
-    sistema.Logar(ursula, "946");
+//    sistema.login(ingred, "123");
+//    sistema.login(ursula, "946");
 
-    ParceiroComercial caio = new ParceiroComercial();
-    caio.Senha = "999";
-    sistema.Logar(caio, "999");
+//    parceirocomercial caio = new parceirocomercial();
+//    caio.senha = "999";
+//    sistema.logar(caio, "999");
 
-}
+//}
 
-UsarSistema();
+//usarsistema();
+
+#endregion
