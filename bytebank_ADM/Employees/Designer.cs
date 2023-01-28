@@ -2,7 +2,7 @@
 {
     internal class Designer : Employee
     {
-        public Designer(string document) : base(document, 3000)
+        public Designer(string name, string document) : base(name, document, 3000)
         {
         }
 

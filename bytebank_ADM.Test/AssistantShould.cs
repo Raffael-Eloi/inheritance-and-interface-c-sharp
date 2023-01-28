@@ -16,13 +16,14 @@ namespace bytebank_ADM.Tests
         {
             #region Arrange
 
+            var name = "Jhon";
             var document = "123456789";
 
             #endregion
 
             #region Act
 
-            Employee jhon = new Assistant(document);
+            Employee jhon = new Assistant(name, document);
 
             #endregion
 

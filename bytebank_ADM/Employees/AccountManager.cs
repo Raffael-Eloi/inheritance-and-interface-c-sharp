@@ -2,7 +2,7 @@
 {
     public class AccountManager : AuthenticableEmployee
     {
-        public AccountManager(string document) : base(document, 4000)
+        public AccountManager(string name, string document) : base(name, document, 4000)
         {
         }
 

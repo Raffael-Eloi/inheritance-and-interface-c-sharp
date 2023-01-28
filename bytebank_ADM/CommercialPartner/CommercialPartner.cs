@@ -4,7 +4,7 @@ namespace bytebank_ADM.CommercialPartner
 {
     public class CommercialPartner : IAuthenticable
     {
-        public string Password { get; set; }
+        public string Password { get; set; } = string.Empty;
 
         public bool Authenticate(string password)
         {

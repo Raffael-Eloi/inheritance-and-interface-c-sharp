@@ -2,7 +2,7 @@
 {
     public class Assistant : Employee
     {
-        public Assistant(string document) : base(document, 2000)
+        public Assistant(string name, string document) : base(name, document, 2000)
         {
         }
 

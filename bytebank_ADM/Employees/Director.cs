@@ -2,7 +2,7 @@
 {
     public class Director : AuthenticableEmployee
     {
-        public Director(string document) : base(document, 5000)
+        public Director(string name, string document) : base(name, document, 5000)
         {
 
         }

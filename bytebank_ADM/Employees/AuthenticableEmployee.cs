@@ -4,11 +4,11 @@ namespace bytebank_ADM.Employees
 {
     public abstract class AuthenticableEmployee : Employee, IAuthenticable
     {
-        public AuthenticableEmployee(string document, double salary) : base(document, salary)
+        public AuthenticableEmployee(string name, string document, double salary) : base(name, document, salary)
         {
         }
 
-        public string Password { get; set; }
+        public string Password { get; set; } = string.Empty;
 
 
         public bool Authenticate(string senha)

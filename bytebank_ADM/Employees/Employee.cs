@@ -10,8 +10,9 @@
 
         public static int EmployeesAmount { get; private set; }
         
-        public Employee(string document, double salary)
+        public Employee(string name, string document, double salary)
         {
+            Name = name;
             Document = document;
             Salary = salary;
             EmployeesAmount++;
