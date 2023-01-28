@@ -1,6 +1,6 @@
 ﻿namespace bytebank_ADM.Employees
 {
-    internal class Assistant : Employee
+    public class Assistant : Employee
     {
         public Assistant(string document) : base(document, 2000)
         {

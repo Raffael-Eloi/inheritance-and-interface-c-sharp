@@ -4,7 +4,7 @@ using bytebank_ADM.Utility;
 
 #region
 
-Employee pedro = new Assistant("123456789");
+Assistant pedro = new Assistant("123456789");
 pedro.Name = "Pedro malazartes";
 
 //Console.WriteLine(pedro.Nome);
