@@ -64,5 +64,32 @@ namespace bytebank_ADM.Tests
 
             #endregion
         }
+
+        [Test]
+        public void When_Increasy_Salary_The_Value_Should_Be_Increased_Ten_Percent_Of_The_Salary()
+        {
+            #region Arrange
+
+            var name = "Jhon";
+            var document = "123456789";
+
+            Employee jhon = new Assistant(name, document);
+
+            #endregion
+
+            #region Act
+
+            var expectedSalaryAfterIncreased = jhon.Salary + (jhon.Salary * 0.1);
+
+            jhon.IncreaseSalary();
+
+            #endregion
+
+            #region Assert
+            
+            Assert.That(jhon.Salary, Is.EqualTo(expectedSalaryAfterIncreased));
+
+            #endregion
+        }
     }
 }
