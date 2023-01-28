@@ -12,7 +12,7 @@ namespace bytebank_ADM.Tests
         }
 
         [Test]
-        public void When_Create_New_Director_The_Default_Salary_Should_Be_Two_Thousand()
+        public void When_Create_New_Director_The_Default_Salary_Should_Be_Five_Thousand()
         {
             #region Arrange
 

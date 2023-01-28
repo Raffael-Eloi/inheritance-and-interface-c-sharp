@@ -1,6 +1,6 @@
 ﻿namespace bytebank_ADM.Employees
 {
-    internal class Designer : Employee
+    public class Designer : Employee
     {
         public Designer(string name, string document) : base(name, document, 3000)
         {
