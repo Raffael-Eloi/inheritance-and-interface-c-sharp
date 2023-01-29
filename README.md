@@ -7,7 +7,7 @@ The goal is to use some of the concepts of the object orientation in C# such as:
 + Overload
 
 ## What was added from original project
-- [ ] Tests [ WIP ⚠️]
+- [x] Tests
 - [x] Refactor
 - [x] Translate from Portuguese to English
 - [ ] Documentation [ WIP ⚠️]
@@ -21,6 +21,9 @@ The goal is to use some of the concepts of the object orientation in C# such as:
 | Designer | 3000 | 17% | 11% |
 | Account Manager | 4000 | 25% | 5% |
 | Director | 5000 | 50% | 15% |
+
+## Test Coverage
+- 100%
 
 ## Packages used
 + NUnit
