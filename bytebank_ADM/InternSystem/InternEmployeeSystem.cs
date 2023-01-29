@@ -1,6 +1,6 @@
 ﻿namespace bytebank_ADM.InternSystem
 {
-    public class InternSystem
+    public class InternEmployeeSystem
     {
         public static bool LogIn(IAuthenticable employee, string password)
         {
