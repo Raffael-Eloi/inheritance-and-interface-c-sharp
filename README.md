@@ -1,5 +1,5 @@
 # Inheritance and interface on c-sharp - [ WIP ⚠️]
-The material was based on a course of [Alura](https://cursos.alura.com.br/formacao-c-sharp-orientacao-objetos). <br>
+The material was based on a course of <a href="https://cursos.alura.com.br/formacao-c-sharp-orientacao-objetos" target="_blank">Alura</a>.<br>
 The goal is to use some of the concepts of the object orientation in C# such as:
 + Inheritance
 + Interface
