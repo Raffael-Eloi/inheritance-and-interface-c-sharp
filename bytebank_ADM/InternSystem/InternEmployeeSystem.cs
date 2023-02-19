@@ -2,7 +2,9 @@
 {
     public class InternEmployeeSystem
     {
-        public static bool LogIn(IAuthenticable employee, string password)
+        public InternEmployeeSystem() {}
+
+        public bool LogIn(IAuthenticable employee, string password)
         {
             bool isEmployeeAuthenticated = employee.Authenticate(password);
 

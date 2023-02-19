@@ -6,10 +6,12 @@ namespace bytebank_ADM.Test
     [TestFixture]
     public class InternSystemShould
     {
+        InternEmployeeSystem internEmployeeSystem;
+
         [SetUp]
         public void SetUp()
         {
-
+            internEmployeeSystem = new ();
         }
 
         private static AuthenticableEmployee CreateAccountManagerEmployee()
@@ -31,7 +33,7 @@ namespace bytebank_ADM.Test
 
             #region Act
 
-            bool isLoginSuccessful = InternEmployeeSystem.LogIn(alice, alice.Password);
+            bool isLoginSuccessful = internEmployeeSystem.LogIn(alice, alice.Password);
 
             #endregion
 
@@ -54,7 +56,7 @@ namespace bytebank_ADM.Test
             #region Act
 
             var incorrectPassword = "akdfaka8945";
-            bool isLoginSuccessful = InternEmployeeSystem.LogIn(alice, incorrectPassword);
+            bool isLoginSuccessful = internEmployeeSystem.LogIn(alice, incorrectPassword);
 
             #endregion
 
