@@ -15,5 +15,10 @@
         {
             Salary *= 1.1;
         }
+
+        public override string ToString()
+        {
+            return $"Name: {Name} - Base salary: {Salary} - Bonus: {GetBonus()} - Position: {nameof(Assistant)}";
+        }
     }
 }
