@@ -49,7 +49,11 @@ namespace bytebank_ADM.Utility
 
         public Employee? GetEmployeeWithDocument(string document)
         {
-            return Employees.Where(employee => employee.Document == document).FirstOrDefault();
+            return Employees
+                .Where(
+                    employee => 
+                        employee.Document == document)
+                .FirstOrDefault();
         }
     }
 }
