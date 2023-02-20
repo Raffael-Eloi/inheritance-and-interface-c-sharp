@@ -186,5 +186,31 @@ namespace bytebank_ADM.Test
 
             #endregion
         }
+
+        [Test]
+        public void Return_Employee_When_Exist_Employee_Registered_With_Given_Document()
+        {
+            #region Arrange
+
+            Employee jhon = CreateAssistantEmployee();
+
+            string document = jhon.Document;
+
+            #endregion
+
+            #region Act
+
+            var employeesManager = new EmployeesManager();
+
+            Employee? employee = employeesManager.GetEmployeeWithDocument(document);
+
+            #endregion
+
+            #region Assert
+
+            Assert.That(employee, Is.Not.Null);
+
+            #endregion
+        }
     }
 }

@@ -46,5 +46,10 @@ namespace bytebank_ADM.Utility
                 Employees.Remove(jhon);
             }
         }
+
+        public Employee? GetEmployeeWithDocument(string document)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
