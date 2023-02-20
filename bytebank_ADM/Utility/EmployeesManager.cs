@@ -49,7 +49,7 @@ namespace bytebank_ADM.Utility
 
         public Employee? GetEmployeeWithDocument(string document)
         {
-            throw new NotImplementedException();
+            return Employees.Where(employee => employee.Document == document).FirstOrDefault();
         }
     }
 }

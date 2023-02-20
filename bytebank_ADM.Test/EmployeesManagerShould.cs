@@ -202,6 +202,8 @@ namespace bytebank_ADM.Test
 
             var employeesManager = new EmployeesManager();
 
+            employeesManager.Register(jhon);
+
             Employee? employee = employeesManager.GetEmployeeWithDocument(document);
 
             #endregion
@@ -209,6 +211,34 @@ namespace bytebank_ADM.Test
             #region Assert
 
             Assert.That(employee, Is.Not.Null);
+
+            #endregion
+        }
+
+        [Test]
+        public void Not_Return_Employee_When_Does_Not_Exist_Employee_Registered_With_Given_Document()
+        {
+            #region Arrange
+
+            Employee jhon = CreateAssistantEmployee();
+
+            string notExistingDocument = "111111";
+
+            #endregion
+
+            #region Act
+
+            var employeesManager = new EmployeesManager();
+
+            employeesManager.Register(jhon);
+
+            Employee? employee = employeesManager.GetEmployeeWithDocument(notExistingDocument);
+
+            #endregion
+
+            #region Assert
+
+            Assert.That(employee, Is.Null);
 
             #endregion
         }
